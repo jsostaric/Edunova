@@ -9,12 +9,10 @@
       <li class="menu-text"><a href="<?php echo $route; ?>index.php"><?php echo $title; ?></a></li>
       <li>
       	<?php if(isset($_SESSION["session"])): ?>
-        <a href="#">Stuff</a>
-        <ul class="menu vertical">
-          <li><a href="#">One</a></li>
-          <li><a href="#">two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul>
+        <li><a href="<?php echo $route; ?>private/dashboard.php">Profile</a></li>
+        <li><a href="<?php echo $route; ?>private/pages/characters.php">Characters</a></li>
+        <li><a href="<?php echo $route; ?>private/pages/adventures.php">Adventures</a></li>
+        
         <?php endif; ?>
       </li>
       <li><a href="<?php echo $route; ?>public/about.php">About</a></li>
