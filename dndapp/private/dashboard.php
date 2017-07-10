@@ -48,9 +48,9 @@ $cond = isset($_GET["cond"]) ? $_GET["cond"] : "";
 						
 						<tbody>
 							<?php
-								$stmt = $db->query("SELECT * FROM player");
-								//$cond = "%" . $cond . "%";
-								//$stmt->execute(array("cond"=> $cond));
+								$stmt = $db->query("SELECT * FROM player WHERE user_name LIKE :cond");
+								$cond = "%" . $cond . "%";
+								$stmt->execute(array("cond"=> $cond));
 								$result = $stmt->fetchALL(PDO::FETCH_OBJ);
 								
 								foreach($result as $row):
